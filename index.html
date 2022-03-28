@@ -26,8 +26,9 @@
         </div>
     </div>
     <div id="todo">
-        <div class="container">
-            <div class="row">
+        <div class="container ">
+            <div class="row todo-list">
+
                 <ul>
                     <!-- Se la proprietà done è uguale a true, visualizzare il testo del todo sbarrato. -->
 
@@ -41,8 +42,12 @@
                 </ul>
                 <!-- Bonus:
                     1- oltre al click sul pulsante, intercettare anche il tasto ENTER per aggiungere il todo alla lista -->
-                <input type="text" v-model="newTodo" placeholder="Inserisci un nuovo todo" @keyup.enter="addNewTodo" />
-                <button @click="addNewTodo">Aggiungi</button>
+                <div class="input-group mb-3">
+                    <button type="button" class="btn btn-primary" @click="addNewTodo">Aggiungi</button>
+                    <input type="text" class="form-control" v-model="newTodo" placeholder="Inserisci un nuovo todo"
+                        @keyup.enter="addNewTodo" />
+
+                </div>
             </div>
         </div>
     </div>

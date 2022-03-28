@@ -2,3 +2,29 @@
     text-decoration: line-through;
 }
 
+.todo-list
+{
+    background-color: #ff00f1;
+    border-radius: 15px;
+
+}
+
+.todo-list ul
+{
+    margin-top: 20px;
+    list-style: none;
+    cursor: pointer;
+}
+
+.todo-list ul li
+{
+    background-color: rgb(229 229 229 / 50%);
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.todo-list ul li:hover
+{
+    background-color: white;
+}
