@@ -33,6 +33,10 @@
                         <i class="fa-solid fa-circle-xmark" @click="deleteItem(index)"></i>{{item.text}}
                     </li>
                 </ul>
+                <!-- Bonus:
+                    1- oltre al click sul pulsante, intercettare anche il tasto ENTER per aggiungere il todo alla lista -->
+                <input type="text" v-model="newTodo" placeholder="Inserisci un nuovo todo" @keyup.enter="addNewTodo" />
+                <button @click="addNewTodo">Aggiungi</button>
             </div>
         </div>
     </div>
