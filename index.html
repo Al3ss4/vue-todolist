@@ -30,7 +30,7 @@
             <div class="row">
                 <ul>
                     <li v-for="(item, index) in todoList">
-                        <i class="fa-solid fa-circle-xmark"></i>{{item.text}}
+                        <i class="fa-solid fa-circle-xmark" @click="deleteItem(index)"></i>{{item.text}}
                     </li>
                 </ul>
             </div>
