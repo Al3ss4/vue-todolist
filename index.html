@@ -29,8 +29,14 @@
         <div class="container">
             <div class="row">
                 <ul>
-                    <li v-for="(item, index) in todoList">
-                        <i class="fa-solid fa-circle-xmark" @click="deleteItem(index)"></i>{{item.text}}
+                    <!-- Se la proprietà done è uguale a true, visualizzare il testo del todo sbarrato. -->
+
+                    <li v-for="(item, index) in todoList" :class="{ 'item-done': item.done }">
+                        <i class="fa-solid fa-circle-xmark" @click="deleteItem(index)"></i>
+                        <!-- bonus2:
+                        invertire valore proprietà done al click-->
+                        <span @click="invertDoneValue(index)">{{item.text}}</span>
+
                     </li>
                 </ul>
                 <!-- Bonus:

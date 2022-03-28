@@ -8,7 +8,7 @@ const app = new Vue({
         /*
 MILESTONE 1
 Stampare all'interno di una lista, un item per ogni todo.
-Se la proprietà done è uguale a true, visualizzare il testo del todo sbarrato.
+
 */
         //creo una lista di oggetti con due proprietà
         todoList:[
@@ -50,5 +50,12 @@ Predisporre un campo di input testuale e un pulsante "aggiungi": cliccando sul p
                this.newTodo = '';
             }
          },
-    }
+
+        // cliccando sul testo dell'item, invertire il valore della proprietà done del todo corrispondente (se done era uguale a false, impostare true e viceversa)
+         invertDoneValue(index) {
+            this.todoList[index].done = !this.todoList[index].done
+            //console.log(this.todoList[index].done);
+        }
+        }
+
 })
